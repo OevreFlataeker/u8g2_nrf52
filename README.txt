@@ -29,3 +29,11 @@
  *
  * Probably most of those configs are not needed apart from TWI_ENABLED and TWI0_ENABLED but I kept them there
  */
+
+Then add the following drivers to the project
+
+$SDKROOT\integration\nrfx\legacy\nrf_drv_twi.c
+$SDKROOT\modules\nrfx\drivers\src\nrfx_twi.c
+$SDKROOT\modules\nrfx\drivers\src\nrfx_twim.c
+
+

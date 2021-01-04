@@ -1,22 +1,15 @@
-stages:
-  - pages
-  - build
-
+# This file is a template, and might need editing before it works on your project.
+# Full project: https://gitlab.com/pages/doxygen
 image: alpine
 
 pages:
   script:
-  - apk update && apk add doxygen
-  - doxygen doxygen/Doxyfile
-  - mv doxygen/documentation/html/ public/
+    - apk update && apk add doxygen
+    - doxygen -g
+    - doxygen Doxyfile
+    - mv html/ public/
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - master
-
-
-build_a:
-  stage: build
-  script:
-    - echo "This job builds something quickly."
+    - master

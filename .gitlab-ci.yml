@@ -1,4 +1,5 @@
 stages:
+  - pages
   - build
 
 image: alpine

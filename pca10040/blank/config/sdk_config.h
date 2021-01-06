@@ -48,6 +48,31 @@
 #endif
 // <h> nRF_Drivers 
 
+#ifndef NRFX_SPIM_ENABLED
+#define NRFX_SPIM_ENABLED 1
+#endif
+
+#ifndef NRFX_SPIM0_ENABLED
+#define NRFX_SPIM0_ENABLED 0
+#endif
+
+#ifndef NRFX_SPIM1_ENABLED
+#define NRFX_SPIM1_ENABLED 1
+#endif
+
+#ifndef NRFX_SPIM_EXTENDED_ENABLED
+#define NRFX_SPIM_EXTENDED_ENABLED 0 // Only available on NRF52840 on SPIM3
+#endif
+
+#ifndef NRFX_SPIM_MISO_PULL_CFG
+#define NRFX_SPIM_MISO_PULL_CFG 1
+#endif
+
+#ifndef NRFX_SPIM_DEFAULT_CONFIG_IRQ_PRIORITY
+#define NRFX_SPIM_DEFAULT_CONFIG_IRQ_PRIORITY 6
+#endif
+
+
 //==========================================================
 // <e> NRFX_PRS_ENABLED - nrfx_prs - Peripheral Resource Sharing module
 //==========================================================
@@ -151,7 +176,7 @@
  
 
 #ifndef NRFX_TWIM0_ENABLED
-#define NRFX_TWIM0_ENABLED 0
+#define NRFX_TWIM0_ENABLED 1
 #endif
 
 // <q> NRFX_TWIM1_ENABLED  - Enable TWIM1 instance
@@ -668,13 +693,13 @@
 // <e> TWI1_ENABLED - Enable TWI1 instance
 //==========================================================
 #ifndef TWI1_ENABLED
-#define TWI1_ENABLED 1
+#define TWI1_ENABLED 0
 #endif
 // <q> TWI1_USE_EASY_DMA  - Use EasyDMA (if present)
  
 
 #ifndef TWI1_USE_EASY_DMA
-#define TWI1_USE_EASY_DMA 1
+#define TWI1_USE_EASY_DMA 0
 #endif
 
 // </e>

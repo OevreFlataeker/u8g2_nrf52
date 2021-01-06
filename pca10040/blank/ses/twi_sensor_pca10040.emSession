@@ -11,7 +11,7 @@
   <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
  </FrameBufferWindow>
  <Memory1>
-  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="oled_u8g2" radix="16" sizeText="" addressText=""/>
+  <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="oled_u8g2" radix="16" sizeText="64" addressText="0x2000078c"/>
  </Memory1>
  <Memory2>
   <MemoryWindow addressSpace="" dataSize="1" autoEvaluate="0" viewMode="0" addressOrder="0" columnsText="" refreshPeriod="0" name="oled_u8g2" radix="16" sizeText="" addressText=""/>
@@ -26,8 +26,10 @@
   <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?"/>
   <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?;oled_u8g2"/>
   <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?;oled_u8g2;Application"/>
+  <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?;oled_u8g2;nRF_Drivers"/>
   <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?;oled_u8g2;nRF_Libraries"/>
   <ProjectSessionItem path="Solution ?oled_u8g2_pca10040?;oled_u8g2;u8g2"/>
+  <SourceCodeControlLogin password="F9BB6682F5D56822" user="Markus Dauberschmidt &lt;daubsi@bigigloo.de>"/>
  </Project>
  <Register1>
   <RegisterWindow visibleNodes="CPU - Current Context/r0;CPU - Current Context/r1;CPU - Current Context/r2;CPU - Current Context/r3;CPU - Current Context/r4;CPU - Current Context/r5;CPU - Current Context/r6;CPU - Current Context/r7;CPU - Current Context/r8;CPU - Current Context/r9;CPU - Current Context/r10;CPU - Current Context/r11;CPU - Current Context/r12;CPU - Current Context/sp(r13);CPU - Current Context/lr(r14);CPU - Current Context/pc(r15);CPU - Current Context/apsr;CPU/r0;CPU/r1;CPU/r2;CPU/r3;CPU/r4;CPU/r5;CPU/r6;CPU/r7;CPU/r8;CPU/r9;CPU/r10;CPU/r11;CPU/r12;CPU/sp(r13);CPU/lr(r14);CPU/pc(r15);CPU/xpsr;CPU/msp;CPU/psp;CPU/cfbp;CPU/internal" binaryNodes="" asciiNodes="" openNodes="CPU - Current Context" name="oled_u8g2" decimalNodes="" octalNodes="" unsignedNodes=""/>
@@ -49,7 +51,7 @@
  </TraceWindow>
  <Watch1>
   <Watches active="1" update="Never">
-   <Watchpoint expression="u8g2.u8x8.bus_clock" name="u8g2.u8x8.bus_clock" radix="10" linenumber="255" filename="../../../main.c"/>
+   <Watchpoint expression="u8g2.u8x8.bus_clock" name="u8g2.u8x8.bus_clock" radix="10" linenumber="490" filename="../../../main.c"/>
   </Watches>
  </Watch1>
  <Watch2>
@@ -62,34 +64,38 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="378" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8g2_d_setup.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2.h" selected="0" top="360" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="246" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="233" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="380" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2.h" selected="0" top="360" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="491" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../main.c" selected="1" top="468" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="505" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2_d_setup.c" selected="0" top="493" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="606" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="601" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="11" y="2089" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../config/sdk_config.h" selected="0" top="2074" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_twi.h" selected="0" top="18" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="559" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_twim.h" selected="0" top="546" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_twi.h" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="916" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/toolchain/cmsis/include/cmsis_gcc.h" selected="0" top="898" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="645" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2_font.c" selected="0" top="627" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="135" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8g2.h" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_setup.c" selected="0" top="115" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_display.c" selected="0" top="89" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="109" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8g2.h" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_display.c" selected="0" top="89" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="411" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_d_ssd1306_128x64_noname.c" selected="0" top="391" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="41" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8x8.h" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_gpio.c" selected="0" top="29" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="71" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/delay/nrf_delay.h" selected="0" top="50" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="39" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8x8.h" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_gpio.c" selected="0" top="17" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="72" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/delay/nrf_delay.h" selected="0" top="50" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="503" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_twim.c" selected="0" top="491" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="50" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_byte.c" selected="0" top="38" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="172" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_cad.c" selected="0" top="153" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="300" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8.h" selected="0" top="283" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="46" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_byte.c" selected="0" top="38" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="308" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_cad.c" selected="0" top="296" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="329" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8x8_display.c" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8.h" selected="0" top="312" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/u8g2/csrc/u8x8.h" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_8x8.c" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="94" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2_buffer.c" selected="0" top="79" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="95" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8g2_buffer.c" selected="0" top="79" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="556" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_gpio.h" selected="0" top="531" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="204" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/components/libraries/delay/nrf_delay.h" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/nrfx_glue.h" selected="0" top="187" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="172" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_glue.h" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/soc/nrfx_coredep.h" selected="0" top="160" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="99" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="5" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="16" y="93" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../components/libraries/util/app_error_weak.c" selected="0" top="54" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_twi.c" selected="0" top="0" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="551" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../integration/nrfx/legacy/nrf_drv_twi.h" selected="0" top="539" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="71" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/mdk/ses_startup_nrf52.s" selected="0" top="59" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="14" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_twi_twim.h" selected="0" top="0" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="190" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/include/nrfx_spim.h" selected="0" top="174" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="672" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/drivers/src/nrfx_spim.c" selected="0" top="654" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="787" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../u8g2/csrc/u8x8_d_ssd1327.c" selected="0" top="765" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="157" useTextEdit="1" openedFrom="D:/nRF5_SDK_17.0.2_d674dde/examples/peripheral/oled_g8/main.c" useBinaryEdit="0" left="0" path="../../../../../../modules/nrfx/hal/nrf_spim.h" selected="0" top="143" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="oled_u8g2" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Release" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/src" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <ARMCrossStudioWindow activeProject="oled_u8g2" fileDialogDefaultFilter="*" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/nRF5_SDK_17.0.2_d674dde/modules/nrfx/drivers/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>
